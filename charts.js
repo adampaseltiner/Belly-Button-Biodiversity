@@ -106,7 +106,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         color: otu_ids,
-        colorscale: "Earth",
+        colorscale: "YlGnBu",
         size: sample_values   
       }
     }];
@@ -132,7 +132,7 @@ function buildCharts(sample) {
       type: "indicator",
       mode: "gauge+number",
       value: wfreq_value,
-      title: {text: "Belly Button Washing Frequency <br> Scrubs Per Week", font: {size:18}},
+      title: {text: "Belly Button Washing Frequency <br> Scrubs Per Week", font: {size:16}},
       gauge: {
         axis: { 
           range: [0, 10], 
@@ -140,21 +140,21 @@ function buildCharts(sample) {
           tickcolor: "black",
           nticks: 6 
         },
-        bar: { color: "black" },
+        bar: { color: "#82EEFD" },
         bgcolor: "white",
-        borderwidth: 4,
-        bordercolor: "gray",
+        borderwidth: 3,
+        bordercolor: "lightgray",
         steps: [
-          { range: [0, 2], color: "red"},
-          { range: [2, 4], color: "orange" },
-          { range: [4, 6], color: "yellow" },
-          { range: [6, 8], color: "limegreen" },
-          { range: [8, 10], color: "green" }]},
+          { range: [0, 2], color: "#abbcea"},
+          { range: [2, 4], color: "#92b4e3" },
+          { range: [4, 6], color: "#7ba4dd" },
+          { range: [6, 8], color: "#628dd6" },
+          { range: [8, 10], color: "#4c74c9" }]},
     }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 500, height: 500, margin: {t: 0, b: 0}
+      width: 500, height: 400, margin: {t: 0, b: 0}
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
